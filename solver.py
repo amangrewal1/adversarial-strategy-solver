@@ -43,7 +43,7 @@ class AdaptiveSolver:
             half = self.window // 2
             arr = np.fromiter(self.loss_hist, dtype=float, count=self.window)
             old, new = arr[:half], arr[half:]
-            se = np.sqrt(old.var(ddof=1) / half + new.var(ddof=1) / half) + 1e-6
+            se = np.sqrt(max(old.var(ddof=1) / half + new.var(ddof=1) / half, 1e-12)) + 1e-6
             stat = (new.mean() - old.mean()) / se
             if stat > self.shift_stat:
                 self._on_shift()
