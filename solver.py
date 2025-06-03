@@ -7,7 +7,7 @@ class AdaptiveSolver:
     name = "adaptive_mwu"
 
     def __init__(self, n_actions, eta=0.25, window=80, shift_stat=3.0,
-                 boost=4.0, decay=0.993, reset_mix=0.45, cooldown=40):
+                 boost=4.0, decay=0.993, reset_mix=0.45, cooldown=35):
         self.n = n_actions
         self.eta_base = eta
         self.eta = eta
