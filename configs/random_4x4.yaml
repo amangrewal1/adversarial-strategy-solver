@@ -1,0 +1,5 @@
+# Random 4x4 zero-sum
+game: random
+n: 4
+T: 2000
+seeds: 10
