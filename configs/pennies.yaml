@@ -1,0 +1,5 @@
+# Matching Pennies benchmark
+game: pennies
+T: 1500
+seeds: 15
+eps: 0.15
