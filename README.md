@@ -1,5 +1,7 @@
 # Adversarial Strategy Solver for Repeated Games
 
+![tests](https://github.com/amangrewal1/adversarial-strategy-solver/actions/workflows/test.yml/badge.svg) ![license](https://img.shields.io/badge/license-MIT-blue)
+
 Solver for repeated payoff-matrix games that adapts to non-stationary opponents.
 Core idea: Multiplicative Weights Update (MWU) augmented with a Welch-style
 drift detector that triggers weight resets and learning-rate boosts when the
