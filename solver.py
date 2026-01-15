@@ -27,6 +27,7 @@ class AdaptiveSolver:
         return self.w.copy()
 
     def act(self, rng):
+        # rng is a np.random.Generator; sample from current mixed strategy
         return int(rng.choice(self.n, p=self.w))
 
     def update(self, losses):
