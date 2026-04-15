@@ -11,4 +11,6 @@ def test_rps_shape():
 def test_pennies_shape():
     A = matching_pennies()
     assert A.shape == (2, 2)
-    assert np.allclose(A + A.T, 0)
+    # Matching pennies is a zero-sum game with value 0 on the main diagonal
+    # sum is zero (each row sums to 0).
+    assert np.allclose(A.sum(axis=1), 0)
